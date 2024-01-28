@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import StyledLink from './Timer.styled'
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(5);
