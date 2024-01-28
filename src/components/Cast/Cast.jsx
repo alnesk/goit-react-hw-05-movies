@@ -9,6 +9,8 @@ import {
   StyledCastList,
 } from './Cast.styled';
 
+import default_poster from '../../img/default_poster.png'
+
 const Cast = () => {
   const [filmCast, setFilmCast] = useState({});
   const [error, setError] = useState(null);
@@ -47,7 +49,10 @@ const Cast = () => {
               <StyledCastItem key={id}>
                 <div>
                   <StyledActorPhoto
-                    src={`https://image.tmdb.org/t/p/w500${profile_path}`}
+                    src={
+                      profile_path ?
+                      `https://image.tmdb.org/t/p/w500${profile_path}`
+                      : default_poster}
                     alt={name}
                     width="180px"
                   />
@@ -63,5 +68,6 @@ const Cast = () => {
     </div>
   );
 };
+
 
 export default Cast;
