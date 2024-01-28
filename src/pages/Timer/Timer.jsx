@@ -53,6 +53,7 @@ const Timer = () => {
   );
 };
 
+
 function FullTimer() {
   return (
     <div>
